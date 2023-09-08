@@ -122,8 +122,7 @@ a:hover{
                 8px 18px 23px rgba(0, 0,0,0.1);
         text-decoration: none;
         margin: 1.2rem;
-        position: relative;
-        animation: bounce 5s ease 0s 1 ;
+        animation: bounce 5s linear infinite;
 
     }
     & h2{
@@ -135,7 +134,7 @@ a:hover{
                 8px 18px 23px rgba(0, 0,0,0.1);
         text-decoration: none;
         margin: 1.2rem;
-        position: relative;
+
         animation: bounce 5s ease 0s reverse;
     }
 
@@ -143,11 +142,13 @@ a:hover{
 
 }
 @keyframes bounce {
-    from{
-        left: 0;
+    0%, 100% {
+        transform: translateX(-50%);
+        opacity: 0;
     }
-    to{
-        left: 500px;
+    50% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 

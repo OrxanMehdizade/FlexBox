@@ -96,3 +96,85 @@ a:hover{
     text-decoration: none;
     color: #0f1384;
 }
+
+
+
+
+
+
+
+
+#header{
+    background-image: url("headrimgs/header-bg.jpg");;
+    background-size: cover;
+    background-attachment:fixed;
+    text-align: center;
+    min-width: 768px;
+    min-height: 150px;
+    padding: 8% 0;
+
+    & h1{
+        font-size: 3rem;
+        color: #fff;
+        text-shadow:
+                8px 4px 3px rgba(0, 0,0,0.4),
+                8px 8px 13px rgba(0, 0,0,0.1),
+                8px 18px 23px rgba(0, 0,0,0.1);
+        text-decoration: none;
+        margin: 1.2rem;
+        position: relative;
+        animation: bounce 5s ease 0s 1 ;
+
+    }
+    & h2{
+        font-size: 2rem;
+        color: #fff;
+        text-shadow:
+                8px 4px 3px rgba(0, 0,0,0.4),
+                8px 8px 13px rgba(0, 0,0,0.1),
+                8px 18px 23px rgba(0, 0,0,0.1);
+        text-decoration: none;
+        margin: 1.2rem;
+        position: relative;
+        animation: bounce 5s ease 0s reverse;
+    }
+
+
+
+}
+@keyframes bounce {
+    from{
+        left: 0;
+    }
+    to{
+        left: 500px;
+    }
+}
+
+.main-nav .container{
+
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
+    /* align-items: stretch; */
+    /* align-items: baseline;  */
+}
+
+
+
+
+

@@ -105,13 +105,12 @@ a:hover{
 
 
 #header{
-    background-image: url("headrimgs/header-bg.jpg");;
+    background-image: url("headrimgs/header2-bg.jpg");;
     background-size: cover;
     background-attachment:fixed;
     text-align: center;
-    min-width: 768px;
-    min-height: 150px;
-    padding: 8% 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     & h1{
         font-size: 3rem;
@@ -122,7 +121,9 @@ a:hover{
                 8px 18px 23px rgba(0, 0,0,0.1);
         text-decoration: none;
         margin: 1.2rem;
-        animation: bounce 5s linear infinite;
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: h1left 5s ease forwards ;
 
     }
     & h2{
@@ -134,28 +135,47 @@ a:hover{
                 8px 18px 23px rgba(0, 0,0,0.1);
         text-decoration: none;
         margin: 1.2rem;
-
-        animation: bounce 5s ease 0s reverse;
-    }
-
-
-
-}
-@keyframes bounce {
-    0%, 100% {
-        transform: translateX(-50%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(100%);
+        animation: h2right 5s ease forwards ;
+
+    }
+
+
+
+}
+@keyframes h1left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
+
+@keyframes h2right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .main-nav .container nav ul{
+    & a{    text-decoration: none;}
+    & a:hover{
+        color: red;
+    }
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+
     list-style: none;
 
 
